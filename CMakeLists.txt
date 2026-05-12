@@ -26,6 +26,12 @@ target_link_libraries(ndarray_tests
 GTest::gtest_main
 )
 
+target_compile_options(ndarray_tests PRIVATE
+    -Wall
+    -Wextra
+    -Wpedantic
+)
+
 include(GoogleTest)
 
 gtest_discover_tests(ndarray_tests)
