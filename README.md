@@ -8,54 +8,49 @@
 
 <p align="center">
 
-[![C++23](https://img.shields.io/badge/C%2B%2B-20-black?style=flat-square&logo=cplusplus)](https://en.cppreference.com/w/cpp/23)
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-black?style=flat-square\&logo=cplusplus)](https://en.cppreference.com/w/cpp/20)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black?style=flat-square)](https://opensource.org/license/mit)
 
-[![CI](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml)
+[![CI](https://github.com/YOUR_USERNAME/NDArray/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/NDArray/actions/workflows/ci.yml)
 [![clang-format](https://img.shields.io/badge/clang--format-checked-black?style=flat-square)](https://clang.llvm.org/docs/ClangFormat.html)
 [![GoogleTest](https://img.shields.io/badge/tests-googletest-black?style=flat-square)](https://github.com/google/googletest)
 
-![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/NDArray?style=flat-square)
-![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/NDArray?style=flat-square)
+![Repo Size](https://img.shields.io/github/repo-size/YOUR_USERNAME/NDArray?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/NDArray?style=flat-square)
 
 </p>
 
----
-
 # NDArray
 
-Modern C++ header-only multidimensional contiguous container library focused on deterministic memory behavior, standards-oriented container semantics, and explicit low-level object lifetime management.
+Modern C++ header-only multidimensional contiguous container library focused on deterministic memory behavior, STL-oriented semantics, and low-level object lifetime control.
 
-The project provides a multidimensional abstraction over contiguous storage while preserving predictable traversal, compile-time dimensionality, and STL-style container behavior.
+NDArray provides:
 
-Unlike abstraction-heavy numerical containers, NDArray prioritizes:
+* compile-time dimensionality
+* contiguous storage guarantees
+* multidimensional traversal abstractions
+* iterator/view-based access
+* constrained template APIs
+* explicit ownership semantics
 
-- explicit ownership semantics
-- deterministic construction/destruction
-- contiguous memory guarantees
-- low-level allocation control
-- constrained compile-time APIs
-- iterator/view-based traversal
+> [!NOTE]
+> NDArray is designed as a systems-oriented container implementation prioritizing predictable memory layout and explicit control over object lifetime.
 
----
+## Features
 
-# Features
+| Feature                   | Description                                              |
+| ------------------------- | -------------------------------------------------------- |
+| Contiguous Storage        | All elements are stored inside a contiguous memory block |
+| Header-Only               | No separate compilation required                         |
+| STL-Oriented Design       | Familiar container semantics and iterator behavior       |
+| Recursive Initialization  | Natural multidimensional initialization syntax           |
+| Views & Iterators         | Dedicated multidimensional traversal abstractions        |
+| Concepts & SFINAE         | Compile-time constrained APIs                            |
+| Explicit Lifetime Control | Manual object construction/destruction model             |
+| Unit Tests                | GoogleTest-based validation                              |
+| CI Pipeline               | GitHub Actions build/test verification                   |
 
-- Header-only multidimensional container
-- Contiguous memory layout
-- STL-style container semantics
-- Recursive multidimensional initialization
-- Custom iterator and view abstractions
-- Const-correct multidimensional traversal
-- Concepts/requires/SFINAE-constrained APIs
-- Explicit manual object lifetime management
-- GoogleTest-based validation pipeline
-- GitHub Actions continuous integration
-- clang-format verification
-
----
-
-# Quick Example
+## Quick Example
 
 ```cpp
 #include <NDArray.hpp>
@@ -72,56 +67,88 @@ for (const auto& row : matrix) {
 }
 ```
 
----
+## Views & Iteration
 
-# Build
+```cpp
+NDArray<int, 2> matrix {
+    {1, 2, 3},
+    {4, 5, 6}
+};
 
-## Configure
+NDArrayView<int, 1> first_row = matrix[0];
+
+for (auto& value : first_row) {
+    std::cout << value << ' ';
+}
+```
+
+> [!TIP]
+> `NDArrayView` provides lightweight multidimensional traversal without transferring ownership.
+
+## Build
+
+### Configure
 
 ```bash
 cmake -B build
 ```
 
-## Build
+### Build
 
 ```bash
 cmake --build build
 ```
 
-## Run Tests
+### Run Tests
 
 ```bash
 ctest --test-dir build --output-on-failure
 ```
 
----
+## Repository Structure
 
-# Documentation
+```text
+include/
+    NDArray.hpp
 
-Detailed technical documentation is available in the `docs/` directory.
+tests/
+    tests.cpp
 
-* [Architecture](./docs/architecture.md)
-* [Memory Model](./docs/memory_model.md)
-* [Iterators & Views](./docs/iterators_and_views.md)
-* [Initialization](./docs/initialization.md)
-* [API Reference](./docs/api_reference.md)
-* [Testing & CI](./docs/testing_and_ci.md)
+examples/
 
----
+docs/
+```
 
-# License
+## Documentation
+
+| Document                                           | Description                             |
+| -------------------------------------------------- | --------------------------------------- |
+| [Getting Started](./docs/getting-started.md)       | Basic setup and usage                   |
+| [Views & Iteration](./docs/views-and-iteration.md) | Iterator and traversal system           |
+| [Initialization](./docs/initialization.md)         | Recursive multidimensional construction |
+| [Memory Management](./docs/memory-management.md)   | Allocation and lifetime model           |
+| [API Reference](./docs/api-reference.md)           | Public API overview                     |
+| [Testing & CI](./docs/testing-and-ci.md)           | Tests and GitHub Actions                |
+
+## Testing
+
+The project includes:
+
+* GoogleTest unit tests
+* GitHub Actions CI
+* clang-format verification
+
+> [!NOTE]
+> All tests are executed automatically on every push and pull request.
+
+## License
 
 MIT License.
 
 See [LICENSE](./LICENSE) for details.
 
----
-
-# Author
+## Author
 
 Ivan Kuzyakin
 
 System Programmer · C/C++ · Low-Level Engineering
-
-
----
