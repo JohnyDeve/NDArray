@@ -1,59 +1,41 @@
-
 # Recursive Initialization
 
-NDArray supports recursive multidimensional initialization using nested initializer lists.
+NDArray supports recursive multidimensional initialization.
 
-Example:
+---
+
+## Example
 
 ```cpp
 NDArray<int, 2> matrix {
     {1, 2, 3},
     {4, 5, 6}
 };
-````
-
----
-
-# Recursive Construction Model
-
-Recursive initialization is implemented using nested dimensional construction semantics.
-
-Simplified representation:
-
-```cpp
-std::initializer_list<NDArray<T, N - 1>>
 ```
 
-This enables:
+## Higher Dimensions
 
-* recursive dimensional composition
-* compile-time dimensional consistency
-* natural multidimensional initialization syntax
+```cpp
+NDArray<int, 3> tensor {
+    {
+        {1, 2},
+        {3, 4}
+    },
+    {
+        {5, 6},
+        {7, 8}
+    }
+};
+```
 
----
+## Design Goals
 
-# Dimensional Consistency
+| Goal                    | Description                   |
+| ----------------------- | ----------------------------- |
+| Compile-Time Dimensions | Dimensions encoded in type    |
+| Predictable Layout      | Contiguous storage            |
+| Recursive Composition   | N-dimensional construction    |
+| STL-Like Semantics      | Familiar initialization model |
 
-Initialization preserves:
-
-* compile-time dimension count
-* deterministic storage layout
-* contiguous allocation semantics
-
-The recursive model allows higher-dimensional arrays to be constructed from lower-dimensional NDArray instances.
-
----
-
-# Why Recursive Initialization Matters
-
-The implementation avoids runtime-shaped nested containers.
-
-Instead, dimensionality is encoded directly into the type system.
-
-This enables:
-
-* stronger compile-time guarantees
-* more predictable traversal
-* safer multidimensional composition
-
----
+> [!TIP]
+> Recursive initialization preserves dimensional correctness at compile time.

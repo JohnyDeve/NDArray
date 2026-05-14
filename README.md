@@ -11,12 +11,12 @@
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-black?style=flat-square\&logo=cplusplus)](https://en.cppreference.com/w/cpp/20)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black?style=flat-square)](https://opensource.org/license/mit)
 
-[![CI](https://github.com/YOUR_USERNAME/NDArray/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/NDArray/actions/workflows/ci.yml)
+[![CI](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml)
 [![clang-format](https://img.shields.io/badge/clang--format-checked-black?style=flat-square)](https://clang.llvm.org/docs/ClangFormat.html)
 [![GoogleTest](https://img.shields.io/badge/tests-googletest-black?style=flat-square)](https://github.com/google/googletest)
 
-![Repo Size](https://img.shields.io/github/repo-size/YOUR_USERNAME/NDArray?style=flat-square)
-![Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/NDArray?style=flat-square)
+![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/NDArray?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/NDArray?style=flat-square)
 
 </p>
 
@@ -35,6 +35,8 @@ NDArray provides:
 
 > [!NOTE]
 > NDArray is designed as a systems-oriented container implementation prioritizing predictable memory layout and explicit control over object lifetime.
+
+---
 
 ## Features
 
@@ -105,19 +107,7 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-## Repository Structure
-
-```text
-include/
-    NDArray.hpp
-
-tests/
-    tests.cpp
-
-examples/
-
-docs/
-```
+---
 
 ## Documentation
 

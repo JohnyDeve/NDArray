@@ -4,7 +4,23 @@ NDArray includes a full validation pipeline based on GoogleTest and GitHub Actio
 
 ---
 
-# Unit Tests
+## CI Pipeline
+
+The GitHub Actions workflow automatically performs:
+
+| Stage      | Description               |
+| ---------- | ------------------------- |
+| Configure  | CMake configuration       |
+| Build      | Project compilation       |
+| Tests      | GoogleTest execution      |
+| Formatting | clang-format verification |
+
+> [!NOTE]
+> All validation steps run automatically on every push and pull request.
+
+---
+
+## Unit Tests
 
 Tests are located in:
 
@@ -19,9 +35,7 @@ The test suite validates:
 * const-correctness
 * exception-sensitive operations
 
----
-
-# GoogleTest Integration
+## GoogleTest Integration
 
 The project uses GoogleTest through CMake FetchContent integration.
 
@@ -32,17 +46,13 @@ include(GoogleTest)
 gtest_discover_tests(ndarray_tests)
 ```
 
----
-
-# Running Tests
+## Running Tests
 
 ```bash
 ctest --test-dir build --output-on-failure
 ```
 
----
-
-# clang-format Verification
+## clang-format Verification
 
 Formatting consistency is verified automatically in CI.
 
@@ -51,18 +61,3 @@ Example:
 ```bash
 clang-format --dry-run --Werror include/NDArray.hpp tests/tests.cpp
 ```
-
----
-
-# GitHub Actions
-
-The CI pipeline automatically performs:
-
-* project configuration
-* compilation
-* unit-test execution
-* formatting validation
-
-on every push and pull request.
-
----
