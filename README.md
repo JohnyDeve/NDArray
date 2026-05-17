@@ -132,10 +132,7 @@ The project includes:
 > All tests are executed automatically on every push and pull request.
 
 ## License
-
-MIT License.
-
-See [LICENSE](./LICENSE) for details.
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details. 
 
 ---
 
