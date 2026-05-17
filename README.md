@@ -137,8 +137,23 @@ MIT License.
 
 See [LICENSE](./LICENSE) for details.
 
-## Author
+---
 
-Ivan Kuzyakin
+## Contacts & Support
 
-System Programmer · C/C++ · Low-Level Engineering
+### Author
+
+**Kuzyakin Ivan** — C Developer & System Architect  
+Feel free to reach out for collaboration or questions regarding the implementation.
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohnyDeve)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/ivan-kuzyakin-1010011100000001010000110000101011011)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/kuzak1n)
+
+### Support the Project
+If this tool helped you or saved you some time, you can support its further development:
+
+[![DonationAlerts](https://img.shields.io/badge/DonationAlerts-F57607?style=for-the-badge)](https://www.donationalerts.com/r/kuzakinc)
+
+---
+*Made with precision, care and love by JohnyDeve|Kuzak*
