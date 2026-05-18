@@ -2,13 +2,13 @@
 
 NDArray implements a dedicated multidimensional traversal system based on reusable iterator/view abstractions.
 
--`NDArrayView`
+- `NDArrayView`
   
-  -    \
+--    \
     
-    -    |>- `GeneralNDArrayView`
+---    |>- `GeneralNDArrayView`
 
-  -    /
+--    /
 
 - `NDArrayConstView`
 
