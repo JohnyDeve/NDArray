@@ -87,6 +87,164 @@ for (auto& value : first_row) {
 > [!TIP]
 > `NDArrayView` provides lightweight multidimensional traversal without transferring ownership.
 
+---
+
+## Why NDArray Exists
+
+Modern C++ provides powerful low-level memory primitives and generic programming facilities, but multidimensional containers often introduce one or more of the following problems:
+
+* fragmented memory layouts
+* runtime-only dimensionality
+* abstraction-heavy traversal models
+* weak iterator semantics
+* hidden allocations
+* limited control over object lifetime
+* insufficient compile-time guarantees
+
+Many existing solutions prioritize mathematical APIs or high-level usability while sacrificing deterministic low-level behavior and explicit ownership semantics.
+
+NDArray was designed to solve these problems by providing:
+
+| Problem                                 | NDArray Solution                       |
+| --------------------------------------- | -------------------------------------- |
+| Non-contiguous multidimensional storage | Strict contiguous memory layout        |
+| Runtime dimension ambiguity             | Compile-time dimensionality            |
+| Expensive traversal abstractions        | Lightweight recursive views            |
+| Weak control over allocation behavior   | Explicit lifetime management           |
+| STL incompatibility                     | STL-oriented iterator semantics        |
+| Difficult multidimensional traversal    | Recursive view-based access            |
+| Unsafe partial initialization           | Deterministic construction/destruction |
+
+NDArray is intended for developers working in:
+
+* systems programming
+* low-level infrastructure
+* performance-oriented applications
+* rendering pipelines
+* simulation systems
+* memory-sensitive environments
+* custom engine/tool development
+
+> [!NOTE]
+> NDArray is not intended to replace high-level numerical frameworks. The project focuses on predictable low-level behavior, explicit ownership semantics, and systems-oriented container design.
+
+### Why Use NDArray Instead of Traditional Nested Containers?
+
+Traditional nested containers such as:
+
+```cpp
+std::vector<std::vector<T>>
+```
+
+often introduce:
+
+* fragmented allocations
+* poor cache locality
+* indirect traversal
+* unpredictable memory behavior
+
+NDArray avoids these issues through deterministic contiguous storage and recursive multidimensional traversal abstractions.
+
+### Why Use NDArray Instead of Numerical Frameworks?
+
+Many numerical frameworks prioritize:
+
+* high-level mathematical APIs
+* runtime polymorphism
+* dynamic shape systems
+
+NDArray instead focuses on:
+
+* low-level memory behavior
+* systems-oriented semantics
+* compile-time dimensional guarantees
+* explicit ownership control
+* predictable traversal cost
+
+> [!NOTE]
+> NDArray is designed for developers who need fine-grained control over memory layout, traversal semantics, and multidimensional container behavior.
+
+---
+
+## Technical Overview
+
+NDArray is implemented as a header-only multidimensional container with explicit low-level ownership semantics and recursive traversal abstractions.
+
+The implementation focuses on several core engineering aspects that directly influence performance, memory predictability, and container correctness.
+
+### Contiguous Storage Model
+
+All elements are stored inside a single contiguous allocation.
+
+This enables:
+
+* cache-friendly traversal
+* deterministic iteration
+* predictable pointer arithmetic
+* compatibility with low-level algorithms
+
+### Compile-Time Dimensionality
+
+Dimensions are encoded directly into the type system:
+
+```cpp
+NDArray<float, 3>
+```
+
+This eliminates runtime dimension ambiguity and enables stronger compile-time constraints.
+
+### Recursive View Architecture
+
+Traversal is implemented through recursive multidimensional views:
+
+```cpp
+NDArrayView<T, N>
+NDArrayConstView<T, N>
+```
+
+The view system:
+
+* avoids unnecessary allocations
+* preserves contiguous traversal semantics
+* enables recursive multidimensional decomposition
+* separates ownership from traversal
+
+### Explicit Object Lifetime Management
+
+NDArray explicitly separates:
+
+* raw memory allocation
+* object construction
+* object destruction
+* memory deallocation
+
+This enables:
+
+* deterministic destruction order
+* exception-safe partial construction rollback
+* allocator-oriented semantics
+* predictable ownership behavior
+
+### Constrained Generic APIs
+
+The library actively uses:
+
+* concepts
+* requires expressions
+* SFINAE constraints
+
+to enforce:
+
+* dimensional correctness
+* iterator compatibility
+* construction safety
+* compile-time API validation
+
+> [!TIP]
+> The project intentionally favors explicit low-level semantics over abstraction-heavy convenience layers.
+
+---
+
 ## Build
 
 ### Configure
