@@ -11,8 +11,8 @@
 [![C++23](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)](https://en.cppreference.com/w/cpp/23)
 [![License: MIT](https://img.shields.io/badge/MIT-green?style=flat-square)](https://opensource.org/license/mit)
 [![GitHub Action](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/JohnyDeve/ndarray-container-cpp/actions)
-[![clang-format](https://img.shields.io/badge/Code%20Style-clang--format-8A2BE2?style=flat-square&logo=llvm)](https://clang.llvm.org/docs/ClangFormat.html)
 [![GoogleTest](https://img.shields.io/badge/googletests-25A162?style=flat-square&logo=google&logoColor=white)](https://github.com/google/googletest)
+[![clang-format](https://img.shields.io/badge/Code%20Style-clang--format-8A2BE2?style=flat-square&logo=llvm)](https://clang.llvm.org/docs/ClangFormat.html)
 
 ![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/ndarray-container-cpp?style=flat-square)
 ![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/ndarray-container-cpp?style=flat-square)
@@ -273,7 +273,7 @@ ctest --test-dir build --output-on-failure
 | Document                                           | Description                             |
 | -------------------------------------------------- | --------------------------------------- |
 | [Getting Started](./docs/getting-started.md)       | Basic setup and usage                   |
-| [Views & Iteration](./docs/views-and-iteration.md) | Iterator and traversal system           |
+| [Views & Iteration](./docs/iterators-and-views.md) | Iterator and traversal system           |
 | [Initialization](./docs/initialization.md)         | Recursive multidimensional construction |
 | [Memory Management](./docs/memory-management.md)   | Allocation and lifetime model           |
 | [API Reference](./docs/api-reference.md)           | Public API overview                     |
