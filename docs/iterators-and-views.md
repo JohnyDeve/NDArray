@@ -5,9 +5,7 @@ NDArray implements a dedicated multidimensional traversal system based on reusab
 * `NDArrayView`
   
   * \
-    
-    * }- `GeneralNDArrayView`
-
+    * }> `GeneralNDArrayView`
   * /
 
 * `NDArrayConstView`
