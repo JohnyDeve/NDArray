@@ -3,20 +3,24 @@
 </p>
 
 <p align="center">
-  <img src="./readme_assets/ndarray-banner.png" alt="NDArray Banner" width="700">
+  <img src="./readme_assets/ndarray-banner.png" alt="NDArray Banner" width="1000">
 </p>
 
 <p align="center">
 
-[![C++20](https://img.shields.io/badge/C%2B%2B-20-black?style=flat-square\&logo=cplusplus)](https://en.cppreference.com/w/cpp/20)
-[![License: MIT](https://img.shields.io/badge/License-MIT-black?style=flat-square)](https://opensource.org/license/mit)
+[![C++23](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)](https://en.cppreference.com/w/cpp/23)
+[![License: MIT](https://img.shields.io/badge/MIT-green?style=flat-square)](https://opensource.org/license/mit)
 
-[![CI](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/NDArray/actions/workflows/ci.yml)
+[![GitHub Action](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/JohnyDeve/ndarray-container-cpp/actions)
+![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/ndarray-container-cpp?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/ndarray-container-cpp?style=flat-square)
+
+[![CI](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml)
 [![clang-format](https://img.shields.io/badge/clang--format-checked-black?style=flat-square)](https://clang.llvm.org/docs/ClangFormat.html)
 [![GoogleTest](https://img.shields.io/badge/tests-googletest-black?style=flat-square)](https://github.com/google/googletest)
 
-![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/NDArray?style=flat-square)
-![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/NDArray?style=flat-square)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/JohnyDeve/matrix-inverter-c/clang-format-check.yml?event=push&style=flat-square&logo=githubactions&logoColor=white&label=clang%20format&labelColor=673DE6)](https://github.com/JohnyDeve/matrix-inverter-c/actions/workflows/clang-format-check.yml)
+
 
 </p>
 
