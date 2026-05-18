@@ -14,7 +14,7 @@
 
 ![Repo Size](https://img.shields.io/github/repo-size/JohnyDeve/ndarray-container-cpp?style=flat-square)
 ![Last Commit](https://img.shields.io/github/last-commit/JohnyDeve/ndarray-container-cpp?style=flat-square)
-[![CIузе: format & gtests chekers](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml)
+[![CI: format & gtests chekers](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnyDeve/ndarray-container-cpp/actions/workflows/ci.yml)
 [![clang-format](https://img.shields.io/badge/clang--format-checked-black?style=flat-square)](https://clang.llvm.org/docs/ClangFormat.html)
 [![GoogleTest](https://img.shields.io/badge/tests-googletest-black?style=flat-square)](https://github.com/google/googletest)
 
