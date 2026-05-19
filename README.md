@@ -1,8 +1,4 @@
 <p align="center">
-  <b>English</b> | <a href="./README.ru.md">Русский</a>
-</p>
-
-<p align="center">
   <img src="./readme_assets/ndarray-banner.png" alt="NDArray Banner" width="1000">
 </p>
 
