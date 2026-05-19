@@ -37,9 +37,22 @@ NDArray provides:
 > [!NOTE]
 > NDArray is designed as a systems-oriented container implementation prioritizing predictable memory layout and explicit control over object lifetime.
 
+## Contents
+
+- [Why NDArray Exists](#why-ndarray-exists) 
+- [Core Features](#core-features)
+- [Technical Overview](#technical-overview)
+- [Quick Example](#quick-example)
+- [Views & Iteration](#views--iteration)
+- [Build](#build)
+- [Documentation](#documentation)
+- [Testing](#testing) 
+- [License](#license) 
+- [Author](#author)
+
 ---
 
-## Features
+## Core Features
 
 | Feature                   | Description                                              |
 | ------------------------- | -------------------------------------------------------- |
